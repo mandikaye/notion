@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Motivational Quote</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f8ff;
+            font-family: Arial, sans-serif;
+        }
+        .quote-box {
+            text-align: center;
+            padding: 20px;
+            border: 2px solid #000;
+            border-radius: 10px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .quote {
+            font-size: 1.5em;
+        }
+    </style>
+</head>
+<body>
+    <div class="quote-box">
+        <p class="quote" id="quote"></p>
+    </div>
+    <script>
+        const quotes = [
+            "The only way to do great work is to love what you do. – Steve Jobs",
+            "The journey of a thousand miles begins with one step. – Lao Tzu",
+            "Believe you can and you're halfway there. – Theodore Roosevelt",
+            "Success is not the key to happiness. Happiness is the key to success. – Albert Schweitzer",
+            "You miss 100% of the shots you don’t take. – Wayne Gretzky",
+            "Don't watch the clock; do what it does. Keep going. – Sam Levenson",
+            "The future belongs to those who believe in the beauty of their dreams. – Eleanor Roosevelt",
+            "It does not matter how slowly you go as long as you do not stop. – Confucius"
+        ];
+
+        function getRandomQuote() {
+            const randomIndex = Math.floor(Math.random() * quotes.length);
+            return quotes[randomIndex];
+        }
+
+        document.getElementById('quote').innerText = getRandomQuote();
+    </script>
+</body>
+</html>
