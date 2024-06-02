@@ -17,8 +17,8 @@
         }
         .quote-box {
             text-align: center;
-            padding: 20px;
-            border: 2px solid #000;
+            padding: calc(10px + 1vw);
+            border: calc(2px + 0.2vw) solid #000;
             border-radius: 10px;
             background-color: #fff;
             color: #000;
@@ -34,11 +34,19 @@
             .quote {
                 font-size: calc(1rem + 2vw); /* Adjust font size for smaller screens */
             }
+            .quote-box {
+                padding: calc(10px + 2vw);
+                border: calc(2px + 0.5vw) solid #000;
+            }
         }
 
         @media (min-width: 1200px) {
             .quote {
                 font-size: calc(1rem + 0.5vw); /* Adjust font size for larger screens */
+            }
+            .quote-box {
+                padding: calc(10px + 0.5vw);
+                border: calc(2px + 0.1vw) solid #000;
             }
         }
     </style>
